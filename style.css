@@ -13,10 +13,10 @@
  }
 
  :root {
-    --bg-color:#060606;
-    --second-bg-color:#060606;
-    --text-color:#fff;
-    --main-color:(84, 44, 195); 
+    --bg-color:#1188bfa0;
+    --second-bg-color:#1188bfa0;
+    --text-color:#000000f6;
+    --main-color:#fff;
  }
 
  html{
@@ -121,12 +121,12 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 4rem;
-    height: 4rem;
+    width: 5rem;
+    height: 5rem;
     background: transparent;
-    border: .2rem solid var(--main-color);
+    border: .3rem solid var(--main-color);
     border-radius: 50%;
-    font-size: 2rem;
+    font-size: 4rem;
     color: var(--main-color);
     margin: 3rem 1.5rem 3rem 0;
     transition: .5s ease;
@@ -136,23 +136,149 @@
     color: var(--second-bg-color);
     box-shadow: 0 0 1rem var(--main-color);
  }
+ 
 
- .btn {
-    display: inline-block;
-    padding: 1rem 2.8rem;
-    background: var(--main-color);
-    border-radius: 4rem;
-    box-shadow: 0 0 1rem var(--main-color);
-    font-size: 1.6rem;
-    color: var(--second-bg-color);
-    letter-spacing: .1rem;
-    font-weight: 600;
-    transition: .5s ease;
- }
+ .blink {
+   animation: blink-animation 1s infinite;
+}
 
- .btn:hover {
-    box-shadow: none;
- }
+@keyframes blink-animation {
+   0%, 100% { opacity: 1; }
+   50% { opacity: 0; }
+}
+.spacer {
+   padding-left: 1px; /* Adjust the value as needed */
+}
+
+.thin-white-italic {
+   font-style: italic;
+   font-weight: 300;
+   color: white;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+
+.contact-box {
+   background-color: #1188bfa0; /* Light background color for the box */
+   border: 1px solid #ddd;      /* Border around the box */
+   border-radius: 8px;          /* Rounded corners for the box */
+   padding: 20px;               /* Padding inside the box */
+   margin: 20px auto;           /* Center the box horizontally and add margin on top and bottom */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a subtle 3D effect */
+   width: fit-content;          /* Adjust the width based on the content inside */
+   max-width: 100%;             /* Ensure the box does not overflow the container */
+   display: block;              /* Ensure the box behaves as a block element */
+}
+
+.contact-info {
+   color: #fff;                 /* White text color for the contact-info */
+}
+
+.contact-info p {
+   margin: 0;                   /* Remove default margin */
+   padding: 10px 0;             /* Padding for each paragraph */
+   font-size: 16px;             /* Font size for the contact details */
+}
+
+.contact-info a {
+   color: #fff;                 /* White color for the links */
+   text-decoration: none;       /* Remove underline from links */
+}
+
+.contact-info a:hover {
+   text-decoration: underline;  /* Underline links on hover */
+}
+
+@keyframes jump {
+   0% {
+       transform: translateY(0);
+   }
+   50% {
+       transform: translateY(-10px); /* Adjust the height of the jump */
+   }
+   100% {
+       transform: translateY(0);
+   }
+}
+
+.logo {
+   display: inline-block;
+   font-size: 24px; /* Adjust font size as needed */
+   color: #000; /* Adjust text color as needed */
+   text-decoration: none;
+}
+
+.logo span {
+   display: inline-block;
+   animation: jump 1s ease infinite; /* Apply animation to each letter */
+}
+
+.logo span:nth-child(1) {
+   animation-delay: 0s; /* Adjust delay to create a wave effect */
+}
+
+.logo span:nth-child(2) {
+   animation-delay: 0.1s;
+}
+
+.logo span:nth-child(3) {
+   animation-delay: 0.2s;
+}
+
+.logo span:nth-child(4) {
+   animation-delay: 0.3s;
+}
+
+.logo span:nth-child(5) {
+   animation-delay: 0.4s;
+}
+
+.logo span:nth-child(6) {
+   animation-delay: 0.5s;
+}
+
+.logo span:nth-child(7) {
+   animation-delay: 0.6s;
+}
+
+.logo span:nth-child(8) {
+   animation-delay: 0.7s;
+}
+
+.logo span:nth-child(9) {
+   animation-delay: 0.8s;
+}
+
+.logo span:nth-child(10) {
+   animation-delay: 0.9s;
+}
+
+
+
+/* Style for the button */
+.btn {
+   display: inline-block;
+   padding: 1rem 2.8rem;
+   background-color: #007bff; /* Background color of the button */
+   color: #ffffff; /* Text color of the button */
+   border: none;
+   border-radius: 4rem;
+   font-size: 1.6rem;
+   text-align: center;
+   text-decoration: none;
+   font-weight: 600;
+   letter-spacing: .1rem;
+   transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+/* Optional: Style for hover effect */
+.btn:hover {
+   background-color: #0056b3; /* Background color on hover */
+   color: #f8f9fa; /* Text color on hover */
+}
 
  .about{
     display: flex;
@@ -164,6 +290,12 @@
  .about-img img{
     width: 35rem;
  }
+
+ .multiple-text {
+   color: #35046a; /* Replace with your desired color */
+   font-weight: bold; /* Optional: Adjust weight if needed */
+}
+
 
  .heading{
     text-align: center;
