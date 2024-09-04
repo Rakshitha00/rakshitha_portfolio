@@ -757,5 +757,15 @@ html {
    background-position: center;
    background-repeat: no-repeat;
    padding: 10rem 9% 2rem; /* Adjust padding as needed */
+   min-height: 100vh; /* Ensure the background is visible on smaller screens */
    color: var(--main-color); /* Ensure text is readable over the image */
 }
+
+/* Media query to handle smaller screens */
+@media (max-width: 768px) {
+   .home, .contact {
+      background-attachment: scroll; /* Prevent fixed backgrounds from being cut off */
+      background-size: contain; /* Adjust size for smaller screens */
+   }
+}
+
