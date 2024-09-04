@@ -768,4 +768,20 @@ html {
       background-size: contain; /* Adjust size for smaller screens */
    }
 }
+@media (max-width: 768px) {
+    .your-element {
+        --bg-color: #1188bfa0;
+        --second-bg-color: #1188bfa0;
+    }
+}
+--bg-color: #1188bf;
+--second-bg-color: #1188bf;
+.your-element {
+    background-color: var(--bg-color, #1188bf); /* Fallback to a solid color */
+}
+.your-element {
+    --bg-color: #1188bfa0 !important;
+    --second-bg-color: #1188bfa0 !important;
+}
+
 
